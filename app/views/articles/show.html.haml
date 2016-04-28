@@ -1,0 +1,25 @@
+%article.blog-content.blog-grid
+  .content.item
+    #main.main.section
+      #Blog1.widget.Blog
+        .post-inner
+          .post.hentry
+            = render("post_meta", article: @article)
+            %h3.post-title.entry-title{:itemprop => "name"}
+              = @article.title
+            #post-body.entry-content{:itemprop => "articleBody"}
+              %div.text_left{:dir => "ltr", :trbidi => "on"}
+                %div.text_left{:dir => "ltr", :trbidi => "on"}
+                  %div.text
+                    .separator_image
+                      = image_tag @article.image, border: "0"
+                    .separator_text
+                      %br/
+                    = @article.body.html_safe
+                  %br/
+                %br/
+                %div.text
+              %div.clear
+            = render("post_share", article: @article)
+          = render("about_author", article: @article)
+          = render("related_post", article: @article) if @related_articles.any?

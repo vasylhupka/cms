@@ -1,0 +1,250 @@
+.clr {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  clear: both;
+  a {
+    text-transform: uppercase;
+    color: black;
+  }
+}
+
+#mobileMenu {
+  display: none;
+  top: 50%;
+  right: 0;
+  margin-top: 10px;
+}
+
+#headerimg {
+  height: 164px;
+  display: block;
+  width: 350px;
+}
+
+#topBanner {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#topbar {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 3;
+  .topbarContainer {
+    height: 73px;
+  }
+}
+
+.topbarContainer {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+#diy .topbarContainer {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+#topmenu {
+  > li > a {
+    text-decoration: none;
+  }
+  li > div {
+    position: absolute;
+  }
+}
+
+.search button {
+  position: absolute;
+}
+
+#topmenu {
+  display: inline-block;
+  margin-top: 13px;
+  margin-left: 269px;
+  > li {
+    float: left;
+    display: block;
+    height: 45px;
+    > a {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #a61d24;
+      display: block;
+      padding-right: 15px;
+    }
+    &:hover > a {
+      color: black;
+    }
+  }
+  li {
+    &.parent > a {
+      background: url("arrow2.png") right 3px no-repeat;
+    }
+    > div {
+      left: 0;
+      right: 0;
+      background: #F5F5F5;
+      padding: 35px;
+      top: 50px;
+      border: 1px solid #E1E1E1;
+      display: none;
+      z-index: 9999999999999;
+      > div {
+        float: left;
+        width: 30%;
+        &:not(:first-child) {
+          margin-left: 5%;
+        }
+      }
+    }
+    li {
+      display: block;
+      &:not(:first-child) {
+        border-top: 1px solid #e1e1e1;
+      }
+      a {
+        display: block;
+        font-size: 18px;
+        padding: 18px 0;
+      }
+    }
+  }
+  > li:not(:first-child) {
+    margin-left: 23px;
+  }
+  h3 {
+    margin-bottom: 14px;
+  }
+  margin-left: 220px;
+  > li:not(:first-child) {
+    margin-left: 12px;
+  }
+  li > div {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1338px) {
+  .topbarContainer {
+    width: 1196px;
+  }
+}
+
+@media screen and (max-width: 1338px) {
+  .topbarContainer {
+    width: 992px;
+  }
+  #topmenu {
+    margin-left: 220px;
+    > li:not(:first-child) {
+      margin-left: 12px;
+    }
+  }
+  #topBanner {
+    height: auto;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1134px) {
+  #topmenu {
+    li {
+      &:hover > div {
+        display: block;
+      }
+      &.parent:hover a {
+        animation: parentLi 0.75s infinite;
+      }
+    }
+    > li.parent > span {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1134px) {
+  #search2, #topmenu {
+    display: none;
+  }
+  .topbarContainer {
+    width: 767px;
+  }
+  #topmenu {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #F5F5F5;
+    padding: 70px 0 15px;
+    border: 1px solid #E1E1E1;
+    > li {
+      &:not(:first-child), > div {
+        margin-top: 25px;
+      }
+      float: none;
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+      position: relative;
+      height: auto;
+      &.parent {
+        margin-right: 55px !important;
+        > {
+          a {
+            padding-right: 0;
+            background: 0 0;
+          }
+          span {
+            position: absolute;
+            right: -34px;
+            top: 0;
+            background: url(/images/theme/arrow.png) center 6px no-repeat !important;
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            &.active {
+              background-position: center -44px !important;
+            }
+          }
+        }
+      }
+      > div {
+        position: relative;
+        border: 0;
+        padding: 0;
+        margin-left: 15px;
+        div {
+          width: 100%;
+          &:not(:first-child) {
+            margin: 20px 0 0 !important;
+          }
+        }
+      }
+    }
+    li li a {
+      padding: 10px 0;
+    }
+  }
+  #mobileMenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 909px) {
+  .topbarContainer {
+    width: 590px;
+  }
+  #mobileMenu {
+    right: 8px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topbarContainer {
+    width: 94%;
+  }
+}

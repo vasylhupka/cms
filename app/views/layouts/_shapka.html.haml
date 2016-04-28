@@ -1,0 +1,167 @@
+/ HEADER
+%header#header.header
+  .container
+    / LOGO
+    .logo.text-center
+      #header.header.section
+        .widget.header
+          #header-inner
+            = link_to "#" do
+              = image_tag "blogstar-logo11A.png", id: :headerimg
+    / END / LOGO
+  / NAVIGATION
+  %nav.pi-navigation{"data-menu-responsive" => "992"}
+    .container
+      %div{:id => "topbar "}
+        .topbarContainer.clr
+          = link_to "#", id: :mobileMenu do
+            = image_tag "mobile.png"
+          %ul#topmenu
+            %li
+              = link_to "Новини", "#"
+            %li
+              = link_to "Професія", "#"
+            %li
+              = link_to "Інтерв'ю", "#"
+            %li
+              = link_to "Технології", "#"
+            %li
+              = link_to "Афіша", "#"
+            %li.parent.newsMenu
+              = link_to "Проекти", "#"
+              .clr
+                %div
+                  %h3
+                    = link_to "Архітектура", "#"
+                  %ul
+                    %li
+                      = link_to "Однородинний будинок", "#"
+                  %ul
+                    %li
+                      = link_to "Блокована забудова", "#"
+                  %ul
+                    %li
+                      = link_to "Багатоквартирні будинки", "#"
+                  %ul
+                    %li
+                      = link_to "Громадські будівлі", "#"
+                  %ul
+                    %li
+                      = link_to "Сакральні будівлі", "#"
+                  %ul
+                    %li
+                      = link_to "МАФ", "#"
+                %div
+                  %h3
+                    = link_to "Дизайн", "#"
+                  %ul
+                    %li
+                      = link_to "Інтер'єр", "#"
+                  %ul
+                    %li
+                      = link_to "Ландшафтний дизайн", "#"
+                %div
+                  %h3
+                    = link_to "Різне", "#"
+                  %ul
+                    %li
+                      = link_to "Архітектурні креслення", "#"
+                  %ul
+                    %li
+                      = link_to "Креслення вузлів", "#"
+                  %ul
+                    %li
+                      = link_to "Студентські роботи", "#"
+            %li.parent.newsMenu
+              = link_to "cg", "#"
+              %span
+              .clr
+                %div
+                  %h3
+                    = link_to "Уроки:", "#"
+                  %ul
+                    %li
+                      = link_to "Revit", "#"
+                  %ul
+                    %li
+                      = link_to "Autocad", "#"
+                  %ul
+                    %li
+                      = link_to "3DS MAX", "#"
+                  %ul
+                    %li
+                      = link_to "Archicad", "#"
+                  %ul
+                    %li
+                      = link_to "Sketchup", "#"
+                  %ul
+                    %li
+                      = link_to "Epic games", "#"
+                  %ul
+                    %li
+                      = link_to "Adobe Photoshop", "#"
+                  %ul
+                    %li
+                      = link_to "Adobe Illustrator", "#"
+                  %ul
+                    %li
+                      = link_to "Різне", "#"
+                %div
+                  %h3
+                    = link_to "Плагіни:", "#"
+                  %ul
+                    %li
+                      = link_to "Revit", "#"
+                  %ul
+                    %li
+                      = link_to "Autocad", "#"
+                  %ul
+                    %li
+                      = link_to "3DS MAX", "#"
+                  %ul
+                    %li
+                      = link_to "Archicad", "#"
+                  %ul
+                    %li
+                      = link_to "Sketchup", "#"
+                  %ul
+                    %li
+                      = link_to "Epic games", "#"
+                  %ul
+                    %li
+                      = link_to "Adobe Photoshop", "#"
+                  %ul
+                    %li
+                      = link_to "Adobe Illustrator", "#"
+                  %ul
+                    %li
+                      = link_to "Різне", "#"
+                %div
+                  %h3
+                    = link_to "Рендер двигуни:", "#"
+                  %ul
+                    %li
+                      = link_to "3ds Max - Corona Renderer", "#"
+                  %ul
+                    %li
+                      = link_to "3ds Max - Vray", "#"
+                  %ul
+                    %li
+                      = link_to "Sketchup - Corona Renderer", "#"
+                  %ul
+                    %li
+                      = link_to "Sketchup - Vray", "#"
+                  %ul
+                    %li
+                      = link_to "Epic Games", "#"
+                  %ul
+                    %li
+                      = link_to "Різне", "#"
+      .search-box
+        %span.icon-search
+          %i.fa.fa-search
+      .share-box
+        = link_to "#", class: "social-facebook", target: "_blank" do
+          %i.fa.fa-facebook
+  / END / NAVIGATION
+/ END / HEADER

@@ -1,0 +1,34 @@
+.grid-item.col-md-6
+  .post.hentry
+    #post-body.entry-content{:itemprop => "articleBody"}
+      .post-media
+        .image-wrap
+          = image_tag article.image, alt: "article.user.nickname"
+      .post-meta
+        .post-date
+          %span.year
+            = article.created_at.year
+          %span.month
+            = article.created_at.month
+          %span.day
+            = article.created_at.day
+        .post-comment
+          %i.fa.fa-comment
+          //need dynamic
+          /= link_to_permalink(article,article.published_comments.size)
+          11
+      .post-body
+        .post-author
+          .name-author
+            %cite
+            //need dynamic
+            admin
+        .post-title
+          %h2
+          = article.title
+        .post-entry
+          %p
+          = article.body
+        .post-link
+          = link_to("Читати далі",article, class: "pi-btn")
+      %div.clear

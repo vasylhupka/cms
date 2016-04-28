@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Blog
+    = render 'layouts/header'
+  %body
+    = render 'layouts/shapka'
+    #page.container
+      .col-md-9
+        = yield
+      .col-md-3
+        #sidebar.sidebar.section
+        = render 'shared/sidebar'
+    = render 'layouts/footer'
+    #page.container
+      .row
+        .span1
+        .span7
+

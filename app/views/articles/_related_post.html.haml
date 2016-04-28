@@ -1,0 +1,13 @@
+.related-post.clearfix
+  %h4 Схожі записи:
+  %ul.row
+    - @related_articles.each do |ra|
+      %li.col-md-4
+        .related-post-item
+          .post-media
+            .image-wrap
+              = image_tag ra.image
+          .post-body
+            .post-title
+              %h2
+                = link_to ra.title, ra

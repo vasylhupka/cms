@@ -1,0 +1,45 @@
+/ FOOTER
+%footer#footer.footer
+  .container
+    .row
+      / WIDGET NEWSLETTER
+      .col-md-4
+        %div.footer-section.section
+          = render('shared/popular_articles')
+          //.clear
+      / END / WIDGET NEWSLETTER
+      / WIDGET META
+      .col-md-4
+        %div.footer-section.section
+          = render('shared/tags')
+      / END / WIDGET META
+      / WIDGET TWITTER
+      .col-md-4
+        %div.footer-section.section
+          %div.widget.ContactForm
+            %h2.title Зворотній зв'язок
+            .contact-form-widget
+              .form
+                = form_tag(contact_us_path, method: 'post') do
+                  %p
+                  %br/
+                  = text_field_tag 'name', nil, class: 'contact-form-name', placeholder: "Ім'я", id: 'contact_form_name', required: true
+                  %br/
+                  %br/
+                  = email_field_tag 'email', nil, class: 'contact-form-email', placeholder: 'Email', id: 'contact_form_email', required: true
+                  %br/
+                  %br/
+                  = text_area_tag 'message', nil, class: 'contact-form-email-message', placeholder: 'Повідомлення', id: 'contact_form_message', required: true
+                  = button_tag 'Надіслати', type: 'submit', class: "contact-form-button contact-form-button-submit", id: "contact_form_submit"
+                  %div.ContactForm.flash
+                    %p#contact_form_error_message.contact-form-error-message
+                    %p#contact_form_success_message.contact-form-success-message
+            .clear
+      / END / WIDGET TWITTER
+      / END / WIDGET ARCHIVES
+      .theme
+  .copyright.text-center
+    .container
+      .footer-left
+        Copyright © 2016
+/ END/FOOTER

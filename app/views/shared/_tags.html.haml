@@ -1,0 +1,7 @@
+%div.widget.Label
+  %h2 Теги
+  .widget-content.cloud-label-widget-content
+    - most_used_tags.each do |tag|
+      %span.label-size
+        = link_to(tag.name, articles_path(tag: tag.name) )
+    .clear

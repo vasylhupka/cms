@@ -1,0 +1,12 @@
+.post-meta
+  .post-date
+    %span.year
+      = article.created_at.year
+    %span.month
+      = article.created_at.month
+    %span.day
+      = article.created_at.day
+  .post-comment
+    %i.fa.fa-comment
+    //= link_to_permalink(article,article.published_comments.size)
+

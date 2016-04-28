@@ -1,0 +1,16 @@
+/ BLOG MAIN CONTENT
+%article.blog-content.blog-grid
+  .row
+    / CONTENT
+    .col-md-12
+      .content
+        #main.main.section
+          #Blog1.widget.Blog
+            .post-wrapper
+              = render @articles
+            .clear
+    / END / CONTENT
+    .clear
+/ BLOG MAIN CONTENT
+.paginate
+//= paginate(@articles)
